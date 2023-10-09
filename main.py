@@ -1,12 +1,12 @@
 from ebay_api.operations import EbayOperations
+from ebay_api import EbayAPIClient
 from constants import APPLICATION, USER, HEADER
 
 
 def main():
-    print(APPLICATION, USER, HEADER)
-
-    ebay_client = EbayOperations(APPLICATION, USER, HEADER)
-    ebay_client.connect()
+    ebay_operations = EbayOperations(APPLICATION, USER, HEADER)
+    products = ebay_operations.get_products_descriptions("iphone", 10)
+    print(products)
 
 if __name__ == "__main__":
     main()
