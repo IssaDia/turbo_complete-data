@@ -1,7 +1,6 @@
 from app.external.ebay_rest_connection import EBAY_REST_CONNECTION
-from app.use_cases.use_cases import GET_PRODUCTS_DESCRIPTIONS_USE_CASE
+from app.use_cases.use_cases_ebay_rest import GET_PRODUCTS_DESCRIPTIONS_USE_CASE
 from app.providers.data.ebay.ebay_rest.ebay_rest_provider import EBAY_REST_PROVIDER
-from constants import APPLICATION, USER, HEADER
 
 def main():
     api_client = EBAY_REST_CONNECTION()
