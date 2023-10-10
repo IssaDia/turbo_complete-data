@@ -1,19 +1,21 @@
-from app.external.ebay_rest_connection import EBAY_REST_CONNECTION
-from app.use_cases.use_cases_ebay_rest import GET_PRODUCTS_DESCRIPTIONS_USE_CASE
-from app.providers.data.ebay.ebay_rest.ebay_rest_provider import EBAY_REST_PROVIDER
-from app.external.mongo_db_cloud_connection import MongoDBAuthAuthProvider
-from app.use_cases.use_case_mongodb_auth import MONGODB_PRODUCTS_LOGIN_CASE
+from app.use_cases.use_case_mongodb import INSERT_DESCRIPTION_USE_CASE
+
+import os
+from dotenv import load_dotenv
+
+from app.providers.bdd.mongodb.mongodb_provider import MONGODB_PROVIDER
+
+load_dotenv()
+
+CLIENT_URL = os.environ.get("MONGODBCLIENT")
+APPLICATION = os.environ.get("APPLICATION")
+USER = os.environ.get("USER")
+HEADER = os.environ.get("HEADER")
 
 def main():
-    # api_client = EBAY_REST_CONNECTION()
-    # api_service = EBAY_REST_PROVIDER(api_client)
-    # get_products_by_description_use_case = GET_PRODUCTS_DESCRIPTIONS_USE_CASE(api_service)
-    # products_by_description = get_products_by_description_use_case.execute("renault", 1)
-
-    mongodb_client = MongoDBAuthAuthProvider()
-    mongo_db_use_case = MONGODB_PRODUCTS_LOGIN_CASE(mongodb_client)
-    mongo_db_use_case.execute()
-   
+    mongodb_client = MONGODB_PROVIDER(CLIENT_URL)
+    insert_description= INSERT_DESCRIPTION_USE_CASE(mongodb_client)
+    insert_description.execute()
 
 if __name__ == "__main__":
     main()

@@ -1,24 +1,15 @@
 from pymongo import MongoClient, errors
-from app.interfaces.auth_provider_interface import AuthenticationProvider
-import os
-from dotenv import load_dotenv
 
-load_dotenv()
+class MongoDB_CONNECTION():
 
-class MongoDBAuthAuthProvider(AuthenticationProvider):
-   
-    def authenticate(self):
-        try:
-            CLIENT = os.environ.get("MONGODBCLIENT")
-            client = MongoClient(CLIENT)
-            client.server_info()
-            db = client.get_database("turbo-complete-data")
-            records = db.Description
-            print(records.count_documents({}))
-           
-        except errors.ConnectionFailure as e:
-            print("Connection failed:", e)
+    _instance = None
 
-    def sign_out(self):
-        # Implement sign-out logic here
-        pass
+    def __new__(cls, client_url):
+        if cls._instance is None:
+            try:
+                cls._instance = super().__new__(cls)
+                cls._instance._client = MongoClient(client_url)
+                print('Database Connection Established........')
+            except(errors):
+                print("Couldn't connect to Database ")   
+        return cls._instance

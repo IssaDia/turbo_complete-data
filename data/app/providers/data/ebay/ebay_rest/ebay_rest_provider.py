@@ -2,12 +2,13 @@ from ebay_rest import API, Error
 import csv
 from app.providers.data.ebay.ebay_rest.utils import strip_html_tags
 from app.interfaces.data_provider_interface import DATA_PROVIDER_INTERFACE
+from app.external.ebay_rest_connection import EBAY_REST_CONNECTION
 
 
 class EBAY_REST_PROVIDER(DATA_PROVIDER_INTERFACE):
 
-    def __init__(self, api_client):
-        self._api_client = api_client
+    def __init__(self):
+        self._api_client = EBAY_REST_CONNECTION()
     def fetch_product_by_id(self, product_id : str):
         try:
             product = self._api_client._api.buy_browse_get_item(product_id)
