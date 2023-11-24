@@ -4,15 +4,15 @@ Welcome to the documentation for the repository in charge of data for the Turbo 
 
 📜 Table of Contents
 
-- Introduction(#introduction)
-- Built With🚀
-- Prerequisites
-- Quick Start
-- Environment Configuration
-- Running the Application
-- Testing
-- Contributing
-- Improvements
+- [Introduction](#introduction)
+- [Built With](#build-with)
+- [Prerequisites](#prerequisites)
+- [Quick Start](#quick_start)
+- [Environment Configuration](#environment-configuration)
+- [Run the Application](#run-the-application)
+- [Contributing](#contributing)
+- [To Improve](#to-improve)
+- [Feedback](#feedback)
 
 
 ## Introduction
@@ -69,11 +69,18 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+7. Set ebay_rest
+https://github.com/matecsaj/ebay_rest
+
+8. Create an account on MongoDB cloud
+
+
+## Environment Configuration
 ```
 Create a .env.local file in the project root and configure necessary environment variables fot EBAY API, MONGODB
 ```
 
-### Launch the project
+## Run the Application
 
 1. Go to
 ```
@@ -85,27 +92,8 @@ app/api
 python3 main.py
 ```
 
-bash
-Copy code
-npm start
-Open your browser and navigate to http://localhost:3000 to view the application.
 
-Environment Configuration
-The application uses environment variables to configure various settings. Create a .env.local file in the project root and define your variables there.
-
-Running the Application
-To start the development server, run:
-
-bash
-Copy code
-npm start
-Testing
-To run tests, execute:
-
-bash
-Copy code
-npm test
-Contributing
+## Contributing
 We welcome contributions! To contribute to the project, follow these steps:
 
 Fork the repository.
@@ -113,9 +101,13 @@ Create a new branch: git checkout -b feature/your-feature-name.
 Make your changes and commit them: git commit -m 'Add some feature'.
 Push to the branch: git push origin feature/your-feature-name.
 Submit a pull request.
-Improvements
+
+
+## To improve
 Here are some areas for improvement:
 
-Expand test coverage.
+Tests API
 Implement Docker for easier application access.
 Feel free to contribute and help make Turbo complete 🚀 even better!
+
+## Feedback
