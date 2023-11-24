@@ -78,14 +78,16 @@ https://github.com/matecsaj/ebay_rest
 ## Environment Configuration
 ```
 Create a .env.local file in the project root and configure necessary environment variables fot EBAY API, MONGODB
+
+MONGODBCLIENT=***your_url***
+APPLICATION=production_1
+USER=production_1
+HEADER=US
 ```
 
 ## Run the Application
 
-1. Go to
-```
-app/api
-```
+1. Go to app/api
 
 2. run the API
 ```
