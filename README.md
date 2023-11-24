@@ -4,7 +4,7 @@ Welcome to the documentation for the repository in charge of data for the Turbo 
 
 📜 Table of Contents
 
-- Introduction
+- Introduction(#introduction)
 - Built With🚀
 - Prerequisites
 - Quick Start
@@ -19,37 +19,37 @@ Welcome to the documentation for the repository in charge of data for the Turbo 
 This project is the data part of the AI Turbo complete 🚀 application. It interacts with the Ebay API and MongoDB  to provide data to be used by the algorithms of the project.
 
 ## Built With
-Python
-Python libraries such as : 
+- Python 3
+- Python libraries such as : 
 
-[Ebay_rest](https://github.com/matecsaj/ebay_rest)
-[Beautifulsoup](https://pypi.org/project/beautifulsoup4/)
-[Flask](https://flask.palletsprojects.com/en/3.0.x/)
-[Pymongo](https://pymongo.readthedocs.io/en/stable/tutorial.html)
+- [Ebay_rest](https://github.com/matecsaj/ebay_rest)
+- [Beautifulsoup](https://pypi.org/project/beautifulsoup4/)
+- [Flask](https://flask.palletsprojects.com/en/3.0.x/)
+- [Pymongo](https://pymongo.readthedocs.io/en/stable/tutorial.html)
 
 
-Prerequisites
+## Prerequisites
 Before running the project, ensure you have the following installed on your system:
 
 Python3: The programming language used for the project.
 Pip: The package installer for Python.
 Virtualenv: A tool for creating isolated Python environments.
 
-Quick Start
+## Quick Start
 
-Clone the repository
+1. Clone the repository
 
-1. Navigate to the project directory
+2. Navigate to the project directory
 
-2.Install dependencies
+3.Install dependencies
 
-3. Create a virtual environment:
+4. Create a virtual environment:
 
 ```
 python -m venv venv
 ```
 
-4. Activate the virtual environment:
+5. Activate the virtual environment:
 
 On Windows:
 
@@ -63,21 +63,27 @@ On Unix or MacOS:
 source venv/bin/activate
 ```
 
-Install project dependencies:
+6. Install project dependencies:
 
 ```
 pip install -r requirements.txt
 ```
 
-bash
-Copy code
-npm install
-Create a .env.local file in the project root and configure necessary environment variables (e.g., API endpoint):
+```
+Create a .env.local file in the project root and configure necessary environment variables fot EBAY API, MONGODB
+```
 
-env
-Copy code
-REACT_APP_API_URL=http://localhost:5000  # Replace with your backend API URL
-Run the application:
+### Launch the project
+
+1. Go to
+```
+app/api
+```
+
+2. run the API
+```
+python3 main.py
+```
 
 bash
 Copy code
