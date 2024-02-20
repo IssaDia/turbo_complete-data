@@ -32,3 +32,6 @@ class EBAY_REST_PROVIDER(DATA_PROVIDER_INTERFACE):
 
     def get_images_file(self, keyword, limit, folder_target):
         return get_images_file(self._api_client, keyword, limit, folder_target)
+    
+    def fetch_product_categories(self, keyword, limit):
+        return fetch_product_categories(self._api_client, keyword, limit)

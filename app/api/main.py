@@ -1,9 +1,13 @@
 import os, sys
+
 sys.path.insert(0, os.path.abspath(".."))
 from flask import Flask, render_template, request, jsonify
 from use_cases.use_case_mongodb import GET_DESCRIPTIONS_USE_CASE
+from use_cases.use_cases_ebay_rest import GET_CATEGORIES_USE_CASE
 from providers.bdd.mongodb.mongodb_provider import MONGODB_PROVIDER
 from use_cases.use_case_mongodb import INSERT_DESCRIPTION_USE_CASE
+from providers.data.ebay.ebay_rest.ebay_rest_provider import EBAY_REST_PROVIDER
+
 
 app = Flask(__name__)
 

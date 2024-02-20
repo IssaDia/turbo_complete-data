@@ -1,7 +1,7 @@
 from interfaces.bdd_provider_interface import BDD_PROVIDER_INTERFACE
 from external.mongo_db_cloud_connection import MongoDB_CONNECTION
 from providers.data.ebay.ebay_rest.ebay_rest_provider import EBAY_REST_PROVIDER
-from use_cases.use_cases_ebay_rest import GET_DESCRIPTIONS_USE_CASE, GET_IMAGES_USE_CASE
+from use_cases.use_cases_ebay_rest import GET_DESCRIPTIONS_USE_CASE
 from providers.bdd.mongodb.utils import insert_documents, get_documents
 
 class MONGODB_PROVIDER(BDD_PROVIDER_INTERFACE):
