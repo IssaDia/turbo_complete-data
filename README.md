@@ -43,36 +43,14 @@ Virtualenv: A tool for creating isolated Python environments.
 
 3.Install dependencies
 
-4. Create a virtual environment:
-
-```
-python -m venv venv
-```
-
-5. Activate the virtual environment:
-
-On Windows:
-
-```
-.\venv\Scripts\activate
-```
-
-On Unix or MacOS:
-
-```
-source venv/bin/activate
-```
-
-6. Install project dependencies:
-
 ```
 pip install -r requirements.txt
 ```
 
-7. Set ebay_rest
+4. Set ebay_rest
 https://github.com/matecsaj/ebay_rest
 
-8. Create an account on MongoDB cloud
+5. Create an account on MongoDB cloud
 
 
 ## Environment Configuration
